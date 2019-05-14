@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 页面meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>订单详情</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+	<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body class="hold-transition skin-red sidebar-mini"  >
+
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">订单详情</h3>
+		</div>
+		<div class="modal-body">							
+			
+			 <ul class="nav nav-tabs">
+			  <li class="active"><a href="#home" data-toggle="tab">基本信息</a></li>
+			  <li><a href="#linkman" data-toggle="tab">收货人信息</a></li>
+			  <li><a href="#certificate" data-toggle="tab">商品信息</a></li>
+			</ul>							
+			
+			<!-- 选项卡开始 -->         
+		    <div id="myTabContent" class="tab-content">
+			    <div class="tab-pane active in" id="home">
+			      <br>
+			      <table class="table table-bordered table-striped"  width="800px">
+			      	<tr>
+			      		<td>订单编号</td>
+			      		<td>2019989834983489</td>
+			      	</tr>
+			      	<tr>
+			      		<td>用户账号</td>
+			      		<td>pinyougou</td>
+			      	</tr>
+			      	<tr>
+			      		<td>支付方式</td>
+			      		<td>微信</td>
+			      	</tr>
+			      	<tr>
+			      		<td>订单来源</td>
+			      		<td>PC</td>
+			      	</tr>
+			      	<tr>
+			      		<td>订单状态</td>
+			      		<td>未发货</td>
+			      	</tr>
+			      	<tr>
+			      		<td>自动确认收货时间</td>
+			      		<td>15天</td>
+			      	</tr>
+			      </table>			      
+      			</div>	
+			    <div class="tab-pane fade" id="linkman">
+			    	<br>
+					<table class="table table-bordered table-striped" >
+			      	<tr>
+			      		<td>收货人</td>
+			      		<td>小李</td>
+			      	</tr>
+			      	<tr>
+			      		<td>手机号码</td>
+			      		<td>13433321234</td>
+			      	</tr>
+			      	<tr>
+			      		<td>收货地址</td>
+			      		<td>重庆西永黑马程序员</td>
+			      	</tr>
+			      </table>
+			    </div>
+			    <div class="tab-pane fade" id="certificate">
+					<br>
+					<!--数据列表-->
+			                  <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+			                      <thead>
+			                          <tr>
+			                             <th class="sorting">商品图片</th>			
+			                             <th class="sorting">商品名称</th>			
+			                             <th class="sorting">商品单价</th>			
+			                             <th class="sorting">数量</th>			
+			                             <th class="sorting">小计</th>			
+			                          </tr>
+			                      </thead>
+			                      <tbody>
+			                          <tr>
+				                          <td><img height="50px" width="50px" src="http://192.168.25.133/group1/M00/00/00/wKgZhVvF7VCALQUeAAK0a3Ux2ro683.jpg"></td>
+				                          <td>苹果xs 移动4G 64G</td>		
+				                           <td>9999.0</td>	
+			                             <td>1</td>			
+			                             <td>9999.0</td>			
+			                          </tr>	
+			                          <tr>
+				                           <td><img height="50px" width="50px" src="http://192.168.25.133/group1/M00/00/00/wKgZhVvF7VCALQUeAAK0a3Ux2ro683.jpg"></td>
+				                          <td>苹果xs 移动4G 64G</td>		
+				                           <td>1000</td>	
+			                             <td>2</td>			
+			                             <td>2000</td>
+			                          </tr>	
+			                      </tbody>
+			                  </table>
+			                 
+							  合计：￥11999                                  
+                               
+			    </div>
+  			    </div> 			
+           <!-- 选项卡结束 -->          
+			
+			
+		</div>
+
+
+</body>
+
+</html>
