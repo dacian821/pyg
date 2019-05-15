@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -42,7 +41,6 @@ public class OrderServiceImpl implements OrderService {
 	 */
 	@Override
 	public List<TbOrder> findAll() {
-
 		return orderMapper.selectByExample(null);
 	}
 
@@ -139,6 +137,7 @@ public class OrderServiceImpl implements OrderService {
 
 		TbOrderExample example = new TbOrderExample();
 		Criteria criteria = example.createCriteria();
+		criteria.andSellerIdEqualTo(order.getSellerId());
 
 		if (order != null) {
 			if (order.getPaymentType() != null && order.getPaymentType().length() > 0) {
@@ -193,24 +192,10 @@ public class OrderServiceImpl implements OrderService {
 		}
 
 		Page<TbOrder> page = (Page<TbOrder>) orderMapper.selectByExample(example);
+
+
+
 		return new PageResult(page.getTotal(), page.getResult());
-	}
-
-
-
-	/**
-	 * 更根据商家id查询该商家的所有订单
-	 * @param sellerId 商家id
-	 * @return 该商家的所有订单列表
-	 */
-	@Override
-	public List<TbOrder> findOrderList(String sellerId) {
-
-		TbOrderExample example = new TbOrderExample();
-		Criteria criteria = example.createCriteria();
-		criteria.andSellerIdEqualTo(sellerId);
-		List<TbOrder> orderList = orderMapper.selectByExample(example);
-		return orderList;
 	}
 
 }

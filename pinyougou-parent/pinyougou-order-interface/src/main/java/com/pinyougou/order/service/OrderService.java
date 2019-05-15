@@ -21,7 +21,7 @@ public interface OrderService {
 	 * 返回分页列表
 	 * @return
 	 */
-	public PageResult findPage(int pageNum,int pageSize);
+	public PageResult findPage(int pageNum, int pageSize);
 	
 	
 	/**
@@ -48,7 +48,7 @@ public interface OrderService {
 	 * 批量删除
 	 * @param ids
 	 */
-	public void delete(Long [] ids);
+	public void delete(Long[] ids);
 
 	/**
 	 * 分页
@@ -56,14 +56,6 @@ public interface OrderService {
 	 * @param pageSize 每页记录数
 	 * @return
 	 */
-	public PageResult findPage(TbOrder order, int pageNum,int pageSize);
-
-
-	/**
-	 * 更根据商家id查询该商家的所有订单
-	 * @param sellerId 商家id
-	 * @return 该商家的所有订单列表
-	 */
-	public List<TbOrder> findOrderList(String sellerId);
+	public PageResult findPage(TbOrder order, int pageNum, int pageSize);
 	
 }

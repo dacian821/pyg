@@ -114,15 +114,15 @@
 			                          </tr>
 			                      </thead>
 			                      <tbody>
-			                          <tr ng-repeat="order in list">
+			                          <tr ng-repeat="order in orderList">
 			                              <td><input  type="checkbox"></td>			                              
 				                          <td>{{order.orderId}}</td>
 				                          <td>{{order.createTime}}</td>
 				                           <td>{{order.userId}}</td>
 			                             <td>{{order.payment}}</td>
-			                             <td>{{paymentTypeList[order.paymentType]}}</td>
-			                             <td>{{sourceTypeList[order.sourceType]}}</td>
-		                                 <td>{{statusList[order.status]}}</td>
+			                             <td>{{order.paymentType}}</td>
+			                             <td>{{order.sourceType}}</td>
+		                                 <td>{{order.status}}</td>
 		                                  <td class="text-center">                                           
 		                                 	  <a  class="btn bg-olive btn-xs" href="order_detail.html">订单详情</a>
 		                                  </td>
